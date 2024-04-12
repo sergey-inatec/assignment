@@ -1,0 +1,10 @@
+The shreder.go is the actaul implementation of the shred function and and shred_test.go are the tests. 
+
+Due to some time constrainst I have not completed all the test cases however here are some scenarios that I would like to check: 
+
+1. Attempt to delete the file which wsa created by some other user in shared folder 
+2. Attempt to modify and then shred the file which was created by root user 
+3. Attempt to delete system file when running under the root user 
+4. Attempt to delete system file when running under reguliar user
+
+This script can be used to delete files with sensitive data, although overriding it three times in case of large files can be quite resource intensive. 
