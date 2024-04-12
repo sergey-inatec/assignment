@@ -1,0 +1,27 @@
+This script automates the process of setting up a virtual machine using QEMU with
+Ubuntu installed. Here's a breakdown of what the script does:
+Download Ubuntu ISO: Downloads the Ubuntu ISO image file from the specified URL
+(UBUNTU_ISO_URL) and saves it as ubuntu.iso.
+Create Disk Image: Creates a disk image (ubuntu_disk.qcow2) with a size of 4GB using
+QEMU's qemu-img command.
+Install Ubuntu: Launches QEMU with the created disk image and the downloaded
+Ubuntu ISO as a CD-ROM. This effectively starts the Ubuntu installation process within
+the virtual machine.
+Wait for Installation: Pauses the script and waits for the user to confirm that the Ubuntu
+installation process has completed. This ensures that the virtual machine has been fully
+installed before proceeding.
+Boot Disk Image: Boots the virtual machine using QEMU with the installed disk image
+(ubuntu_disk.qcow2).
+Wait for Boot: Pauses the script for 30 seconds to allow time for the virtual machine to
+boot up.
+Mount Disk Image: Creates a mount point (/mnt/ubuntu_mount) and mounts disk image
+(ubuntu_disk.qcow2) to it.
+Add "Hello World" File: Creates a file named hello_world.txt inside the mounted disk
+image directory (/mnt/ubuntu_mount) and writes "hello world" to it.
+Unmount Disk Image: Unmounts the disk image from the mount point.
+Clean Up: Removes the temporary files (ubuntu.iso) and directories created during the
+process
+
+
+To Run. 
+sudo source installer.sh
